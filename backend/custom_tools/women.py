@@ -25,7 +25,7 @@ class WomenResourceTool(Tool):
     filtered_df = women_df[
       (women_df['LONGITUDE'] >= longitude - 0.1) & (women_df['LONGITUDE'] <= longitude + 0.1) &
       (women_df['LATITUDE'] >= latitude - 0.1) & (women_df['LATITUDE'] <= latitude + 0.1)
-    ][["VENDOR", "ADDRESS", "LONGITUDE", "LATITUDE"]]
+    ][["VENDOR", "ADDRESS", "LONGITUDE", "LATITUDE"]][:10]
     
 
     

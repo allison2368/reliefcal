@@ -24,7 +24,7 @@ class HospitalTool(Tool):
     filtered_df = hospital_df[
       (hospital_df['Longitude'] >= longitude - 0.1) & (hospital_df['Longitude'] <= longitude + 0.1) &
       (hospital_df['Latitude'] >= latitude - 0.1) & (hospital_df['Latitude'] <= latitude + 0.1)
-    ][["Facility Name", "Building URL", "Longitude", "Latitude"]]
+    ][["Facility Name", "Building URL", "Longitude", "Latitude"]][:10]
     
     print("buildings found\n", filtered_df)
     

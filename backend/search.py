@@ -73,6 +73,7 @@ Do not try to make new data, only use the data directly provided and be exact.
 If there are duplicants in the data, please remove them, and choose what seems best.
 Do not include additional text, only the JSON object.
 Be exact with the data.
+Please give at most 6 responses.
 
 All successful responses are in the form
 {
@@ -104,7 +105,7 @@ async def search(question: str) -> str:
         tools=tools,
         parallel_tool_calls=False,
         messages=messages,
-        model="llama-4-scout-17b-16e-instruct",
+        model="llama-3.3-70b",
     )
     
     newMessages = await all_tools.callTools(initial_response.choices[0])
@@ -113,7 +114,7 @@ async def search(question: str) -> str:
     # Request the final response from the model, now that it has the calculation result.
     final_response = client.chat.completions.create(
         messages=messages,
-        model="llama-4-scout-17b-16e-instruct",
+        model="llama-3.3-70b",
         response_format={"type": "json_object"}
     )
 

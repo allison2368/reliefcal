@@ -8,21 +8,16 @@ class PremadeOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> spacedChildren = [];
-
-    for (Widget child in children) {
-      spacedChildren.add(child);
-      spacedChildren.add(SizedBox(width: 8.0));
-    }
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 16.0),
         Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
         const SizedBox(height: 4.0),
-        Row(
-          children: spacedChildren,
+        Wrap(
+          spacing: 8.0, // gap between adjacent chips
+          runSpacing: 4.0, // gap between lines
+          children: children,
         )
       ],
     ); // Or any other empty widget

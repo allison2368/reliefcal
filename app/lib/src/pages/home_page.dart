@@ -57,10 +57,13 @@ class HomePage extends StatelessWidget {
                 Option(emoji: "🔥", text: "Fire", prompt: "Find Fire Stations"),
                 Option(emoji: "🏥", text: "Hospitals", prompt: "Find Hospitals"),
                 Option(emoji: "👮", text: "Police", prompt: "Find Police Stations"),
+                Option(emoji: "🟥", text: "Red Cross", prompt: "Find me red cross locations"),
+                Option(emoji: "🏠", text: "Shelter", prompt: "Find me Salvation Army locations"),
               ]),
               const PremadeOptions(title: "Non-Emergency", children: [
                 Option(emoji: "♀️", text: "Womens' Health Care", prompt: "Find facilities that redeem vouchers with WIC food instruments and vouchers."),
                 Option(emoji: "☀️", text: "Weather", prompt: "what's the weather"),
+                Option(emoji: "🥫", text: "Food Banks", prompt: "Find me food banks"),
               ]),
               Expanded(child: SearchResultsConsumer(controller: controller))
             ]),
