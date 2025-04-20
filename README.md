@@ -9,6 +9,5 @@ Presentation: https://docs.google.com/presentation/d/1KPaRR9iLibaBrVCNyybMoxSMCm
 # Tools we used 
 ## Cerebras, Flutter, Dart, Python, Google API
 
-# App Design
-![image](https://github.com/user-attachments/assets/5df1d4f0-e2e1-4ac8-b325-5b01fd18f1db)
+
 
