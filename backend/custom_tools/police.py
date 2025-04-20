@@ -1,7 +1,6 @@
 # Constants
 import json
 from backend.custom_tools.tool import Tool
-import googlemaps
 
 from backend.network import make_request_post
 
@@ -29,15 +28,6 @@ class PoliceTool(Tool):
         }, data={
             "textQuery": "police stations",
         })
-
-        print(police_stations)
-        # fire_stations = gmaps.places(query=query, location={
-        #     "lat": latitude,
-        #     "lng": longitude
-        #     }, radius=5000)
-        # 
-        # print(fire_stations)
-        # fire_stations = await nearby_text_search(latitude, longitude, 5000, query)
         
         if police_stations:
             return json.dumps(police_stations)

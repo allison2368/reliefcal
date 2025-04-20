@@ -9,6 +9,8 @@ app = Flask(__name__)
 def hello_world():
     query = request.args.get('query', '')
     
-    result = asyncio.run(search(query))
+    result = asyncio.run(search(query)).replace('```', '')
+    
+    print(result)
     
     return json.loads(result);
