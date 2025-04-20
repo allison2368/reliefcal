@@ -3,7 +3,7 @@ from typing import Any
 from backend.custom_tools.hospitals import HospitalTool
 from backend.custom_tools.tool import Tool
 from backend.custom_tools.weather import WeatherTool
-
+from backend.custom_tools.women import WomenResourceTool
 class Tools:
   tools: dict[str, Tool] = {}
   
@@ -51,3 +51,4 @@ all_tools = Tools()
 # add your tools here!
 all_tools.registerTool(WeatherTool())
 all_tools.registerTool(HospitalTool())
+all_tools.registerTool(WomenResourceTool())
