@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
                     return const SampleItemDetailsView();
                   case HomePage.routeName:
                   default:
-                    return const HomePage();
+                    return HomePage(controller: settingsController);
                 }
               },
             );

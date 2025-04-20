@@ -4,16 +4,25 @@ import 'package:team_moo_moo/src/state/search_model.dart';
 
 class MySearchBar extends StatefulWidget {
   final String title;
-  
 
-  const MySearchBar({super.key, required this.title, });
+  const MySearchBar({
+    super.key,
+    required this.title,
+  });
 
   @override
   State<MySearchBar> createState() => _MySearchBarState();
 }
 
 class _MySearchBarState extends State<MySearchBar> {
-  final TextEditingController _controller = TextEditingController();
+  final _controller = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

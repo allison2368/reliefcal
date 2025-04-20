@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:team_moo_moo/src/components/PremadeOptions.dart';
 import 'package:team_moo_moo/src/components/option.dart';
 import 'package:team_moo_moo/src/components/search_results.dart';
+import 'package:team_moo_moo/src/settings/settings_controller.dart';
 import 'package:team_moo_moo/src/state/search_model.dart';
 
 import '../components/my_search_bar.dart';
@@ -13,11 +14,13 @@ class HomePage extends StatelessWidget {
   const HomePage({
     super.key,
     this.items = const [SampleItem(1), SampleItem(2), SampleItem(3)],
+    required this.controller
   });
 
   static const routeName = '/';
 
   final List<SampleItem> items;
+  final SettingsController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class HomePage extends StatelessWidget {
       create: (_) => SearchModel(),
       child: Scaffold(
           appBar: AppBar(
-            title: const Text('Sample Items'),
+            title: const Text('ReliefCal'),
             actions: [
               IconButton(
                 icon: const Icon(Icons.settings),
@@ -46,20 +49,20 @@ class HomePage extends StatelessWidget {
           // In contrast to the default ListView constructor, which requires
           // building all Widgets up front, the ListView.builder constructor lazily
           // builds Widgets as they’re scrolled into view.
-          body: const Padding(
-            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
+          body: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
             child: Column(children: [
-              MySearchBar(title: "Search"),
-              PremadeOptions(title: "Emergency", children: [
-                Option(emoji: "🔥", text: "Fire"),
-                Option(emoji: "🏥", text: "Hospitals"),
-                Option(emoji: "👮", text: "Police"),
+              const MySearchBar(title: "Search"),
+              const PremadeOptions(title: "Emergency", children: [
+                Option(emoji: "🔥", text: "Fire", prompt: "Find Fire Stations"),
+                Option(emoji: "🏥", text: "Hospitals", prompt: "Find Hospitals"),
+                Option(emoji: "👮", text: "Police", prompt: "Find Police Stations"),
               ]),
-              PremadeOptions(title: "Non-Emergency", children: [
-                Option(emoji: "♀️", text: "Womens' Health Care"),
-                Option(emoji: "☀️", text: "Weather"),
+              const PremadeOptions(title: "Non-Emergency", children: [
+                Option(emoji: "♀️", text: "Womens' Health Care", prompt: "Find facilities that redeem vouchers with WIC food instruments and vouchers."),
+                Option(emoji: "☀️", text: "Weather", prompt: "what's the weather"),
               ]),
-              SearchResults()
+              Expanded(child: SearchResultsConsumer(controller: controller))
             ]),
           )),
     );

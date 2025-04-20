@@ -114,6 +114,7 @@ async def search(question: str) -> str:
     final_response = client.chat.completions.create(
         messages=messages,
         model="llama-4-scout-17b-16e-instruct",
+        response_format={"type": "json_object"}
     )
 
     # Handle and display the model's final response.
