@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "cerebras-cloud-sdk>=1.29.0",
+    "flask>=3.1.0",
     "google-api-python-client>=2.167.0",
     "google-maps-places>=0.1.25",
     "googlemaps>=4.10.0",
