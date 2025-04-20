@@ -18,25 +18,27 @@ class Option extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: () {
-        context.read<SearchModel>().changeQuery(prompt);
-      },
-      style: ButtonStyle(
-          padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
-              const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0))),
-      child: Row(
-        children: [
-          Text(
-            emoji,
-            style: const TextStyle(fontSize: 16.0), // Adjust size as needed
-          ),
-          const SizedBox(width: 4.0), // Space between emoji and text
-          Text(
-            text,
-            style: const TextStyle(fontSize: 14.0), // Adjust text style
-          ),
-        ],
+    return IntrinsicWidth(
+      child: OutlinedButton(
+        onPressed: () {
+          context.read<SearchModel>().changeQuery(prompt);
+        },
+        style: ButtonStyle(
+            padding: WidgetStateProperty.all<EdgeInsetsGeometry>(
+                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4.0))),
+        child: Row(
+          children: [
+            Text(
+              emoji,
+              style: const TextStyle(fontSize: 16.0), // Adjust size as needed
+            ),
+            const SizedBox(width: 4.0), // Space between emoji and text
+            Text(
+              text,
+              style: const TextStyle(fontSize: 14.0), // Adjust text style
+            ),
+          ],
+        ),
       ),
     );
   }

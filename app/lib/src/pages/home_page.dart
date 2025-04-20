@@ -51,7 +51,9 @@ class HomePage extends StatelessWidget {
           // builds Widgets as they’re scrolled into view.
           body: Padding(
             padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-            child: Column(children: [
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
               const MySearchBar(title: "Search"),
               const PremadeOptions(title: "Emergency", children: [
                 Option(emoji: "🔥", text: "Fire", prompt: "Find Fire Stations"),
