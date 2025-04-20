@@ -10,54 +10,6 @@ client = Cerebras(
 
 tools = all_tools.toCerebrasTools()
 
-# tools = [
-#     {
-#         "type": "function",
-#         "function": {
-#             "name": "get_weather_forecast",
-#             "strict": True,
-#             "description": "A tool that gets current weather forecasts. Use this when the user asks for live weather data (implicitly or explicitly)",
-#             "parameters": {
-#                 "type": "object",
-#                 "properties": {
-#                     "longitude": {
-#                         "type": "number",
-#                         "description": "The longitude of the requested location"
-#                     },
-#                     "latitude": {
-#                       "type": "number",
-#                       "description":" The latitude of the requested location"
-#                     }
-#                 },
-#                 "required": ["longitude", "latitude"]
-#             }
-#         }
-#     }
-# ]
-
-
-test = [
-    {
-        'type': 'function',
-        'function': {
-            'name': 'weather_tool',
-            'strict': True,
-            'description':'A tool that gets current weather forecasts. Use this when the user asks for live weather data (implicitly or explicitly)',
-            'properties': {
-                'longitude': {
-                    'type': 'number', 
-                    'description': 'The longitude of the requested location'
-                },
-                'latitude': {
-                    'type': 'number',
-                    'description': ' The latitude of the requested location'
-                }
-            },
-            'required': ['longitude', 'latitude']
-            }
-        }
-    ]
-
 context_prompt = """
 You are acting as a search engine for results, and you have many tools that can query you the data you need.
 
