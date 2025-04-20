@@ -9,7 +9,7 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 
 class RedCrossTool(Tool):
     def __init__(self):
-        super().__init__(name="google_search",
+        super().__init__(name="red_cross_tool",
                          description="A tool that gets nearby Red Cross Locations given a location. Use this when the user asks for Red Cross. ",
                          properties={
 							"latitude": {

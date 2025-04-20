@@ -9,7 +9,7 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 
 class SalvationTool(Tool):
     def __init__(self):
-        super().__init__(name="google_search",
+        super().__init__(name="salvation_tool",
                          description="A tool that gets nearby Salvation Army Locations given a location. Find Salvation Army locations that provide disaster relief. Use this when the user asks for Salvation Army. ",
                          properties={
 							"latitude": {

@@ -8,7 +8,7 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 
 class PoliceTool(Tool):
     def __init__(self):
-        super().__init__(name="google_search",
+        super().__init__(name="police_tool",
                          description="A tool that gets nearby police stations given a location. Use this when the user asks for police stations. ",
                          properties={
 							"latitude": {

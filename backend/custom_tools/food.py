@@ -9,8 +9,8 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 
 class FoodTool(Tool):
     def __init__(self):
-        super().__init__(name="google_search",
-                         description="A tool that looks for nearby food co-op or free food distribution centers given a location. Use this when the user asks for food banks. ",
+        super().__init__(name="food_tool",
+                         description="A tool that looks for nearby food co-op or free food distribution centers or food banks given a location. Use this when the user asks for food banks. ",
                          properties={
 							"latitude": {
 								"type": "number",
