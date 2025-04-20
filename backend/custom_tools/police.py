@@ -9,7 +9,7 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 class PoliceTool(Tool):
     def __init__(self):
         super().__init__(name="police_tool",
-                         description="A tool that gets nearby police stations given a location. Use this when the user asks for police stations. It will return an with a field results, which is an array of json objects, where displayName is an HTML string containing the name, googleMapsUri is the URL for the fire station, and adrFormatAddress is the address.",
+                         description="A tool that gets nearby police stations given a location. Use this when the user asks for police stations. It will return an with a field results, which is an array of json objects representing the police stations, where displayName is an HTML string containing the name, googleMapsUri is the URL for the police station, and adrFormatAddress is the address.",
                          properties={
 							"latitude": {
 								"type": "number",

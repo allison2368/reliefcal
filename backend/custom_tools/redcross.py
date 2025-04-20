@@ -10,7 +10,7 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 class RedCrossTool(Tool):
     def __init__(self):
         super().__init__(name="red_cross_tool",
-                         description="A tool that gets nearby Red Cross Locations given a location. Use this when the user asks for Red Cross. It will return an with a field results, which is an array of json objects, where displayName is an HTML string containing the name, googleMapsUri is the URL for the fire station, and adrFormatAddress is the address",
+                         description="A tool that gets nearby Red Cross Locations given a location. Use this when the user asks for Red Cross. It will return an with a field results, which is an array of json objects representing the red cross locations, where displayName is an HTML string containing the name, googleMapsUri is the URL for the red cross location, and adrFormatAddress is the address",
                          properties={
 							"latitude": {
 								"type": "number",
