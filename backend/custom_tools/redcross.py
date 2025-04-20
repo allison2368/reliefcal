@@ -7,10 +7,10 @@ from backend.network import make_request_post
 
 API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual API key
 
-class FoodTool(Tool):
+class RedCrossTool(Tool):
     def __init__(self):
         super().__init__(name="google_search",
-                         description="A tool that looks for nearby food co-op or free food distribution centers given a location. Use this when the user asks for food banks. ",
+                         description="A tool that gets nearby Red Cross Locations given a location. Use this when the user asks for Red Cross. ",
                          properties={
 							"latitude": {
 								"type": "number",
@@ -23,22 +23,16 @@ class FoodTool(Tool):
                          })
 
     async def tool_call(self, latitude: float, longitude: float):
-        food_banks = await make_request_post("https://places.googleapis.com/v1/places:searchText", headers={
+        red_cross = await make_request_post("https://places.googleapis.com/v1/places:searchText", headers={
             "X-Goog-Api-Key": API_KEY,
             "X-Goog-FieldMask": "places.displayName,places.googleMapsUri,places.adrFormatAddress"
         }, data={
-            "textQuery": "food banks",
+            "textQuery": "Red Cross",
         })
 
-        print(food_banks)
-        # fire_stations = gmaps.places(query=query, location={
-        #     "lat": latitude,
-        #     "lng": longitude
-        #     }, radius=5000)
-        # 
-        # print(fire_stations)
-        # fire_stations = await nearby_text_search(latitude, longitude, 5000, query)
+        print(red_cross)
+      
         
-        if food_banks:
-            return json.dumps(food_banks)
+        if red_cross:
+            return json.dumps(red_cross)
         return "Something Went Wrong."
