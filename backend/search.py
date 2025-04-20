@@ -68,8 +68,9 @@ The field 'type' can be something like, 'hospital', 'weather', 'event', etc.
 
 You can infer what each of these fields should mean, just keep it consistent.
 If you have data of multiple types, put them all in the same array.
-If there is not enough sufficient data, please say 'Not Enough Data' and why there isn't enough data.
+If there is not enough sufficient data for certain fields, make them null.
 Do not try to make new data, only use the data directly provided and be exact.
+You can trust that the tools return the necessary data. 
 If there are duplicants in the data, please remove them, and choose what seems best.
 Do not include additional text, only the JSON object.
 Be exact with the data.
