@@ -58,9 +58,25 @@ test = [
         }
     ]
 
+context_prompt = """
+You are acting as a search engine for results, and you have many tools that can query you the data you need.
+
+When answering, please provide the response as a list of json objects with the following desirable fields:
+
+'name', 'url', 'latitude' (if not applicable, set to null), 'longitude' (if not applicable, set to null), 'type', 'description'.
+
+The field 'type' can be something like, 'hosptial', 'weather', 'event', etc.
+
+You can infer what each of these fields should mean, just keep it consistent.
+If you have data of multiple types, put them all in the same array.
+If there is not enough sufficient data, please say 'Not Enough Data'.
+Do not try to make new data, only use the data directly provided.
+If there are duplicants in the data, please remove them, and choose what seems best.
+Do not include additional text, only the JSON object.
+"""
+
 base_messages = [
-    {"role": "system", "content": "You are acting as a search engine for results, and you have many tools that can query you the data you need. When answering, please provide a quick, 1 sentence response."},
-    # {"role": "user", "content": "What's the result of 15 multiplied by 7?"},
+    {"role": "system", "content": context_prompt},
 ]
 
 async def search(question: str) -> str:
