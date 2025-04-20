@@ -6,6 +6,9 @@ from backend.custom_tools.weather import WeatherTool
 from backend.custom_tools.women import WomenResourceTool
 from backend.custom_tools.fire import FireTool
 from backend.custom_tools.police import PoliceTool
+from backend.custom_tools.food import FoodTool
+from backend.custom_tools.salvationarmy import SalvationTool
+from backend.custom_tools.redcross import RedCrossTool
 class Tools:
   tools: dict[str, Tool] = {}
   
@@ -56,3 +59,6 @@ all_tools.registerTool(HospitalTool())
 all_tools.registerTool(WomenResourceTool())
 all_tools.registerTool(FireTool())
 all_tools.registerTool(PoliceTool())
+all_tools.registerTool(FoodTool())
+all_tools.registerTool(SalvationTool())
+all_tools.registerTool(RedCrossTool())
