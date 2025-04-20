@@ -4,7 +4,7 @@ from backend.custom_tools.hospitals import HospitalTool
 from backend.custom_tools.tool import Tool
 from backend.custom_tools.weather import WeatherTool
 from backend.custom_tools.women import WomenResourceTool
-from backend.custom_tools.google import GoogleTool
+from backend.custom_tools.fire import FireTool
 class Tools:
   tools: dict[str, Tool] = {}
   

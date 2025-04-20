@@ -7,7 +7,7 @@ from backend.network import make_request_post
 
 API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual API key
 
-class GoogleTool(Tool):
+class FireTool(Tool):
     def __init__(self):
         super().__init__(name="google_search",
                          description="A tool that gets nearby fire stations given a location. Use this when the user asks for fire stations. ",
