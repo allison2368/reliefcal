@@ -6,11 +6,4 @@ Presentation: https://docs.google.com/presentation/d/1KPaRR9iLibaBrVCNyybMoxSMCm
 <img width="1028" alt="Screen Shot 2025-04-19 at 11 56 58 PM" src="https://github.com/user-attachments/assets/4e662fc7-f2ba-45d9-b3e6-f5d9d49dac0c" />
 
 
-## Methods:
-
-### Using a Google Form, we gathered data from a diverse student body at UC Davis in order to determine the best needs for disaster relief
-
-
-
-
 
