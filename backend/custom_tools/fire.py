@@ -10,7 +10,7 @@ API_KEY = "AIzaSyAC1c_yUCOj-UpfK6ReYzDmS42HuR6Gwb8"  # Replace with your actual 
 class FireTool(Tool):
     def __init__(self):
         super().__init__(name="fire_search",
-                         description="A tool that gets nearby fire stations given a location. Use this when the user asks for fire stations. It will return an with a field results, which is an array of json objects representing the fire stations, where displayName is an HTML string containing the name, googleMapsUri is the URL for the fire station, and adrFormatAddress is the address",
+                         description="A tool that gets nearby fire stations given a location. Use this when the user asks for fire stations. It will return an with a field results, which is an array of json objects representing the fire stations for the requested location, where displayName is an HTML string containing the name, googleMapsUri is the URL for the fire station, and adrFormatAddress is the address",
                          properties={
 							"latitude": {
 								"type": "number",
